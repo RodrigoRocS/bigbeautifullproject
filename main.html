@@ -6,8 +6,9 @@
     <title>Big Beautifull Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
+<body id="geral">
+    <div>
+    <header id="cabecalho">
         <p>Home</p>
         <p>About</p>
         <p>Skills</p>
@@ -17,7 +18,7 @@
     <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/PAORQoMvSdY?si=5gtj9BEB0dcTSCCf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <div>
+    <div id="formulario">
         <form action="" method="post">
         <fieldset>
             <legend>Log in:</legend>
@@ -38,7 +39,15 @@
                 <option value="">Belo Horizonte</option>
             </select>
         </fieldset>
+        <fieldset>
+            <legend>Deixe sua mensagem:</legend>
+            <label for="mensagem">Mensagem:</label>
+            <textarea name="mensagem" id="mensagem" cols="30"
+            rows="4" placeholder="Deixe sua mensagem:"></textarea>
+        </fieldset>
+        <input type="submit" value="Enviar">
         </form>
+    </div>
     </div>
 </body>
 </html>
