@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Beautifull Project</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
 </head>
 <body id="geral">
     <div>
@@ -44,8 +45,22 @@
             <label for="mensagem">Mensagem:</label>
             <textarea name="mensagem" id="mensagem" cols="30"
             rows="4" placeholder="Deixe sua mensagem:"></textarea>
+            <input type="submit" value="Enviar">
         </fieldset>
-        <input type="submit" value="Enviar">
+        <fieldset>
+            <legend>Cauculadora:</legend>
+            <select name="operacao" id="opcao">
+                <option value="1">Soma</option>
+                <option value="2">Subtração</option>
+                <option value="3">Multiplicação</option>
+                <option value="4">Divisão</option>
+            </select>
+            <label for="mensagem">Valores:</label>
+            <input type="number" name="val1" id="">
+            <input type="number" name="val2" id="">
+            <input type="submit" value="Enviar">
+        </fieldset>
+        
         </form>
     </div>
     </div>
