@@ -1,0 +1,20 @@
+#geral {
+    display: flex;
+    border: 5px solid black;
+    justify-content: center;
+}
+
+#input-endereco {
+    background-color: aqua;
+}
+
+#formulario {
+    display: flex;
+    justify-content: center;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-around;
+    background-color: darkgrey;
+}
