@@ -30,3 +30,21 @@ array_splice($carros, 1, 2);
 
 print_r($carros);
 echo "O tamanho atual do array é: " . count($carros);
+
+$frutas = array(
+    "vermelhas" => array(
+        "melancia",
+        "cereja",
+        "framboesa",
+        "morango"
+    ),
+
+    "citricas" => array(
+        "laranja",
+        "limao",
+        "abacaxi",
+        "mexerica"
+    ),
+
+    //array de arrays
+);
