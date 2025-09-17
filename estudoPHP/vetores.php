@@ -29,7 +29,7 @@ array_splice($carros, 1, 2);
 // a partir da posição 1 elimina os 2 seguintes (posições 2 e 3 do array)
 
 print_r($carros);
-echo "O tamanho atual do array é: " . count($carros);
+echo "O tamanho atual do array é: " . count($carros) . "\n";
 
 $frutas = array(
     "vermelhas" => array(
@@ -45,6 +45,7 @@ $frutas = array(
         "abacaxi",
         "mexerica"
     ),
-
     //array de arrays
 );
+
+echo $frutas['citricas'][2] . "\n";
