@@ -1,28 +1,35 @@
 <?php
 // Teste de conexão PDO
+
+define('HOST', 'localhost');
+define('PORT', '5432'); // só especifica a porta se for necessario.
+define('DBNAME', 'test');
+define('USER', 'root');
+define('PASSWORD', '1234');
+
 try {
-    // Teste com SQLite (funciona sem configuração adicional)
     $pdo = new PDO('sqlite::memory:');
     echo "✅ PDO SQLite funcionando!\n";
-
 } catch (PDOException $e) {
-    echo "❌ Erro PDO: " . $e->getMessage() . "\n";
+    echo "❌ Erro PDO SQLite: " . $e->getMessage() . "\n";
 }
 
-// Teste específico para MySQL (se instalado)
+// Teste específico para MySQL
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '1234');
+    $pdo = new PDO("mysql:host=" . HOST . ";dbname=" . DBNAME, USER, PASSWORD);
     echo "✅ PDO MySQL funcionando!\n";
 } catch (PDOException $e) {
-    echo "ℹ️  PDO MySQL não configurado (esperado): " . $e->getMessage() . "\n";
+    echo "ℹ️  PDO MySQL não configurado: " . $e->getMessage() . "\n";
 }
 
+// Teste específico para PostgreSQL
 try {
-    $pdo = new PDO('pgsql:host=localhost;dbname=test', 'root', '1234');
+    $pdo = new PDO("pgsql:host=" . HOST . ";dbname=" . DBNAME, USER, PASSWORD);
     echo "✅ PDO PostgreSQL funcionando!\n";
 } catch (PDOException $e) {
-    echo "ℹ️  PDO PostgreSQL não configurado (esperado): " . $e->getMessage() . "\n";
+    echo "ℹ️  PDO PostgreSQL não configurado: " . $e->getMessage() . "\n";
 }
 
 // Mostra drivers disponíveis
 echo "Drivers disponíveis: " . implode(", ", PDO::getAvailableDrivers()) . "\n";
+?>
