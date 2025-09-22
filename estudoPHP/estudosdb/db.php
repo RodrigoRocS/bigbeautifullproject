@@ -24,7 +24,7 @@ try {
 
 // Teste específico para PostgreSQL
 try {
-    $pdo = new PDO("pgsql:host=" . HOST . ";dbname=" . DBNAME, USER, PASSWORD);
+    $pdo = new PDO("pgsql:host=" . HOST . ";dbname=" . DBNAME, USER, PASSWORD/*, array(PDO::ATTR_PERSISTENT => true)*/); //caso queira manter uma conexao persistente
     echo "✅ PDO PostgreSQL funcionando!\n";
 } catch (PDOException $e) {
     echo "ℹ️  PDO PostgreSQL não configurado: " . $e->getMessage() . "\n";
@@ -32,4 +32,6 @@ try {
 
 // Mostra drivers disponíveis
 echo "Drivers disponíveis: " . implode(", ", PDO::getAvailableDrivers()) . "\n";
+//encerra a conexao
+$pdo = null;
 ?>
